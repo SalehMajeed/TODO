@@ -16,7 +16,6 @@ Mutation events->
         1. Disconnect()
         2. observe()
         3. takeRecords()
-        4. takeRecords()
 
         Observered have few properties->
         1.type.
