@@ -14,6 +14,7 @@ async function get_data() {
 	// console.log('hello');
 	const request = await fetch('./fetch.js');
 	console.log(request);
+	console.log('hello');
 	const val = await request.text();
 	console.log(val);
 	console.log('val');
