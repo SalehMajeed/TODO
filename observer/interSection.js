@@ -1,14 +1,16 @@
-const ul_id2 = document.getElementById('ul-id2');
-
-const callback = function (entries) {
-	console.log(entries[0]);
-};
+const target = document.querySelector('.section:last-child');
 
 const configure = {
-	root: ul_id2,
-	threshold: 0.5,
+	threshold: 0.7,
 };
+
+function callback(entry) {
+	if (entry[0].isIntersecting) {
+		console.log(entry[0]);
+		inter_section.unobserve(target);
+	}
+}
 
 const inter_section = new IntersectionObserver(callback, configure);
 
-inter_section.observe(ul_id2);
+inter_section.observe(target);
